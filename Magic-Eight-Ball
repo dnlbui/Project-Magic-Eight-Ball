@@ -1,0 +1,50 @@
+//function contains a control flow to tell someones fortune
+//user inputs a question, output will be a random fortune
+function Magic8Ball (userName = '',userQuestion = ''){
+  const randomNumber = Math.floor(Math.random()*8);
+  let eightBall = '';
+
+  //control flow using ternary statements
+  console.log(userName.length === 0 ? 'Hello!' : `Hello, ${userName}!`);
+  
+  //Control flow for a greeting using if statements
+  // if(userName.length === 0){
+  //   console.log('Hello!');
+  // }
+  // else{
+  //   console.log(`Hello, ${userName}!`);
+  // }
+
+  //prints users question
+  console.log(userQuestion+ "\nLet's ask the magic eight ball!" + '\n------------------------');
+
+  //control flow for magic eight ball results
+  if(randomNumber === 0){
+    eightBall = 'It is certain';
+  }
+  else if(randomNumber === 1){
+    eightBall = 'It is decidedly so';
+  }
+  else if(randomNumber === 2){
+    eightBall = 'Reply hazy try again';
+  }
+  else if(randomNumber === 3){
+    eightBall = 'Cannot predict now';
+  }
+  else if(randomNumber === 4){
+    eightBall = 'Do not count on it';
+  }
+  else if(randomNumber === 5){
+    eightBall = 'My sources say no';
+  }
+  else if(randomNumber === 6){
+    eightBall = 'Outlook not so good';
+  }
+  else if(randomNumber === 7){
+    eightBall = 'Signs point to yes';
+  }
+  //prints eightball results
+  console.log(eightBall);
+}
+
+Magic8Ball ('',userQuestion = 'Will I get a job?')
